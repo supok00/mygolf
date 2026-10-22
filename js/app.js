@@ -955,8 +955,32 @@
   // ───────────── 설치형 웹앱(PWA) ─────────────
   let installPrompt = null;
   if (!native && "serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(() => { /* 지원하지 않는 브라우저 */ });
+    // 새 버전 알림: 새 서비스 워커가 설치되어 화면을 넘겨받으면(controllerchange) 적용 버튼을 띄운다.
+    // 처음 설치할 때는 이전 버전이 없으므로 띄우지 않는다.
+    let hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (hadController) showUpdateBar();
+      hadController = true;
+    });
+    navigator.serviceWorker.register("sw.js").then((reg) => {
+      const check = () => reg.update().catch(() => { /* 오프라인 */ });
+      // 설치형 앱은 오래 켜 두거나 백그라운드에서 돌아오는 일이 많아, 돌아올 때와 30분마다 새 버전을 확인한다
+      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") check(); });
+      setInterval(check, 30 * 60 * 1000);
+    }).catch(() => { /* 지원하지 않는 브라우저 */ });
   }
+  function showUpdateBar() {
+    if (document.getElementById("updBar")) return;
+    const bar = document.createElement("div");
+    bar.id = "updBar";
+    bar.className = "updbar";
+    bar.innerHTML = `<span>✨ 새 버전이 있습니다</span><button class="btn" id="updNow" type="button">지금 적용</button><button class="link" id="updLater" type="button">나중에</button>`;
+    document.body.appendChild(bar);
+    // 입력 중인 라운드는 기기에 임시 저장되어 있어 새로고침해도 이어서 쓸 수 있다
+    document.getElementById("updNow").onclick = () => location.reload();
+    document.getElementById("updLater").onclick = () => bar.remove();
+  }
+
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     installPrompt = e;
