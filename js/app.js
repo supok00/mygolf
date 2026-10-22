@@ -160,7 +160,7 @@
     stats: ["스코어 유형 카드를 누르면 그 스코어가 나온 라운드가 아래에 나옵니다.", "추이 그래프는 기간이 1년 이하면 월별, 3년 이하면 분기별, 그 이상은 연도별로 묶습니다. 연도를 고르면 그해를 월별로 봅니다.", "골프장 이름을 누르면 그 골프장 라운드만 걸러 봅니다."],
     insights: ["라운드 날짜·시간으로 만든 요약입니다. 오전/오후는 티오프 시간이 있는 라운드(스마트스코어 붙여넣기 등)만 집계합니다."],
     holes: ["Par가 기록된 홀만 집계합니다."],
-    detail: ["v2 「상세분석」과 같은 7개 블록입니다. 상세 항목을 기록한 홀만 각 표에 들어갑니다."],
+    detail: ["v2 「상세분석」 7개 블록에 ⑧ 홀 길이별(실제로 친 티 거리) 분석을 더했습니다. 상세 항목을 기록한 홀만 각 표에 들어갑니다."],
   };
   const desc = (k) => (DESC[k] ? `<ul class="desc">${DESC[k].map((x) => `<li>${x}</li>`).join("")}</ul>` : "");
   const head = (k) => filterBar() + desc(k);
@@ -289,6 +289,7 @@
   const FLAT = FIELDS.flatMap(([, fs]) => fs);
   const TEXT_KEYS = new Set(["miss", "gmiss", "memo"]);
   const HINT = {
+    dist: "실제로 친 티 기준(m)",
     score: "파=0, 보기=1, 더블=2, 버디=-1", fw: "파4·파5만", miss: "L 왼쪽 / R 오른쪽 / H 훅 / S 슬라이스 / - 없음",
     ong: "그린에 올라가기까지 친 타수(벌타 포함)", gir: "비우면 온그린 타수로 자동 판정", sg: "어프로치가 의도대로 됐으면 ○",
     gmiss: "그린을 놓친 방향", appr: "그린을 놓쳤을 때 핀까지 남은 거리",
@@ -402,24 +403,38 @@
       const m = meta();
       const prev = S.byRecent(rounds.filter((x) => x.course === m.course && x.id !== edit?.id));
       if (!prev.length) return toast("같은 골프장 이전 기록이 없습니다.");
-      // 코스명이 전반·후반 어느 쪽에 있었든 그 9홀 정보를 쓴다
-      const nine = (name, fallbackFront) => {
-        for (const p of prev) {
-          if (name && p.front === name) return p.holes.filter((h) => h.h <= 9);
-          if (name && p.back === name) return p.holes.filter((h) => h.h > 9);
+      const norm = (t) => String(t || "").trim().toLowerCase();
+      // 9홀 정보 찾기: 코스명이 전반·후반 어느 쪽에 있었든 같은 코스명의 9홀을 쓴다.
+      // 코스명을 적었는데 같은 코스 기록이 없으면 다른 코스 값을 쓰지 않는다(엉뚱한 Par가 들어가지 않게).
+      const nine = (list, name, front) => {
+        for (const p of list) {
+          if (name && p.front === name) return { p, holes: p.holes.filter((h) => h.h <= 9) };
+          if (name && p.back === name) return { p, holes: p.holes.filter((h) => h.h > 9) };
         }
-        return prev[0].holes.filter((h) => (fallbackFront ? h.h <= 9 : h.h > 9));
+        if (name || !list.length) return null;
+        return { p: list[0], holes: list[0].holes.filter((h) => (front ? h.h <= 9 : h.h > 9)) };
       };
-      const fill = (src, start) => src.sort((a, b) => a.h - b.h).forEach((h, i) => {
-        const t = H[start + i];
-        if (!t) return;
-        for (const k of ["par", "dist", "hcp"]) if (isNum(h[k]) && !isNum(t[k])) t[k] = h[k];
-      });
-      fill(nine(m.front, true), 1);
-      fill(nine(m.back, false), 10);
+      const fill = (src, start, keys) => {
+        if (!src) return 0;
+        let n = 0;
+        src.holes.slice().sort((a, b) => a.h - b.h).forEach((h, i) => {
+          const t = H[start + i];
+          if (!t) return;
+          for (const k of keys) if (isNum(h[k]) && !isNum(t[k])) { t[k] = h[k]; n++; }
+        });
+        return n;
+      };
+      // Par·핸디캡은 티와 상관없이 같고, 거리는 티마다 달라 '같은 티'로 친 기록에서만 가져온다
+      const sameTee = prev.filter((p) => norm(p.tee) && norm(p.tee) === norm(m.tee));
+      const pf = nine(prev, m.front, true), pb = nine(prev, m.back, false);
+      const df = nine(sameTee, m.front, true), db = nine(sameTee, m.back, false);
+      const nPar = fill(pf, 1, ["par", "hcp"]) + fill(pb, 10, ["par", "hcp"]);
+      const nDist = fill(df, 1, ["dist"]) + fill(db, 10, ["dist"]);
       saveDraft();
       drawAll();
-      toast(`${dot(prev[0].date)} 등 이전 기록에서 코스 정보를 불러왔습니다.`);
+      const src = [pf, pb].filter(Boolean).map((x) => dot(x.p.date));
+      toast((nPar ? `Par·핸디캡: ${[...new Set(src)].join(", ")} 기록에서 불러왔습니다.` : "같은 코스명의 이전 기록이 없어 Par·핸디캡을 채우지 못했습니다.")
+        + "\n" + (nDist ? `거리: 같은 티(${m.tee})로 친 기록에서 불러왔습니다.` : `거리: ${m.tee ? `같은 티(${m.tee})로 친` : "티를 적은"} 기록이 없어 비워 두었습니다. 스코어카드의 ${m.tee || "친 티"} 거리를 넣어 주세요.`), 6000);
     };
     $("bSave").onclick = async () => {
       const m = meta();
@@ -757,6 +772,11 @@
       ${t("④ 파 유형별", ["", "홀 수", "평균 Score", "파 이하율", "더블+ 비율"], D.par.map((x) => ["파" + x.p, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl)]), "파5 더블+가 많으면 '3온 전략(안전한 레이업)'을 검토합니다.")}
       ${t("⑤ 티샷 미스 방향", ["", "횟수", "비율", "평균 Score", "평균 벌타"], D.miss.map((x) => [x.l, x.n, pct(x.share), sgn(x.over), f2(x.pen)]), "한쪽으로 쏠림이 크면(예: R 60% 이상) 셋업·그립 점검 신호입니다.")}
       ${t("⑥ 홀 난이도 · 전후반", ["", "홀 수", "평균 Score"], D.hcp.map((x) => [x.l, x.n, sgn(x.over)]), "쉬운 홀(핸디캡 13~18)에서도 평균 +1 이상이면 실수 관리 문제입니다. 핸디캡은 기록한 라운드만 집계됩니다.")}
+      ${t("⑧ 홀 길이별 (실제로 친 티 거리)", ["", "홀 수", "평균 Score", "파 이하율", "더블+ 비율", "GIR"],
+        [...D.len.p3.map((x) => ["파3 " + x.l, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl), pct(x.gir)]),
+         ...D.len.p4.map((x) => ["파4 " + x.l, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl), pct(x.gir)]),
+         ...D.len.p5.map((x) => ["파5 " + x.l, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl), pct(x.gir)])],
+        `거리를 기록한 ${D.len.n}홀 기준. 긴 파4에서만 크게 무너지면 '보기 공략(3온)'을, 짧은 홀에서도 더블이 많으면 티샷·어프로치 실수를 먼저 점검합니다. 파3 거리대별 GIR은 그 거리의 아이언 정확도입니다.`)}
       ${t("⑦ 그린 미스 · 어프로치 거리", ["", "홀 수", "평균 Score", "스크램블%"], D.green.map((x) => [x.l, x.n, sgn(x.over), x.scr === null ? "-" : pct(x.scr)]), "짧음이 대부분이면 한 클럽 길게, 30m 이상에서 스크램블이 낮으면 하프 웨지 거리 연습을 우선합니다.")}`;
     document.getElementById("scope").onchange = (e) => { location.hash = "#/detail" + (e.target.value ? "?r=" + encodeURIComponent(e.target.value) : ""); };
     chart("cFp", { type: "bar", data: { labels: D.fp.map((x) => x.l), datasets: [{ label: "1퍼트율", data: D.fp.map((x) => x.one), backgroundColor: "#2e7d5b" }, { label: "3퍼트율", data: D.fp.map((x) => x.three), backgroundColor: "#e5352b" }] }, options: baseOpts({ plugins: legendOn, scales: { y: { beginAtZero: true, ticks: { callback: (v) => Math.round(v * 100) + "%" }, ...noGrid }, x: noGrid } }), plugins: [valueLabels(pct)] });

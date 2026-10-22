@@ -221,6 +221,21 @@ const GolfStats = (() => {
         const x = band(hs, "appr", a, b);
         return { l, n: x.length, over: avg(x.map((h) => h.score)), scr: scr(x) };
       })),
+      // 거리(실제로 친 티 기준)가 기록된 홀만. 긴 홀과 짧은 홀 중 어디서 타수를 잃는지 본다
+      len: (() => {
+        const lenRow = (l, x) => {
+          const g = x.map(holeGir).filter((v) => v !== null);
+          return { l, n: x.length, over: avg(x.map((h) => h.score)), parlow: ratio(x.filter((h) => h.score <= 0).length, x.length), dbl: ratio(x.filter((h) => h.score >= 2).length, x.length), gir: ratio(sum(g), g.length) };
+        };
+        const withDist = hs.filter((h) => isNum(h.dist) && h.dist > 0);
+        const band = (par, lo, hi) => withDist.filter((h) => h.par === par && h.dist >= lo && h.dist < hi);
+        return {
+          n: withDist.length,
+          p4: [["300m 미만", 0, 300], ["300~340m", 300, 340], ["340m 이상", 340, 9999]].map(([l, a, b]) => lenRow(l, band(4, a, b))),
+          p3: [["130m 미만", 0, 130], ["130~160m", 130, 160], ["160m 이상", 160, 9999]].map(([l, a, b]) => lenRow(l, band(3, a, b))),
+          p5: [["450m 미만", 0, 450], ["450m 이상", 450, 9999]].map(([l, a, b]) => lenRow(l, band(5, a, b))),
+        };
+      })(),
     };
   }
 
