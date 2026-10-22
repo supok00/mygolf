@@ -98,13 +98,14 @@
     const el = document.getElementById("status");
     if (!el) return;
     const src = { github: "GitHub 최신본", pages: "배포본(최대 몇 분 늦을 수 있음)", cache: "이 기기 캐시(오프라인)" }[source] || "-";
-    el.innerHTML = `<span>데이터: ${src}${loadedAt ? " · " + loadedAt.toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" }) : ""}</span>
+    el.innerHTML = `${G.pending() ? `<a class="ng" href="#/settings" style="color:#ffd2cc;font-weight:700">⚠ 동기화 필요</a>` : ""}<span>데이터: ${src}${loadedAt ? " · " + loadedAt.toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" }) : ""}</span>
       <span class="${G.canWrite() ? "ok" : "muted"}">${G.canWrite() ? "● 저장 가능" : "○ 읽기 전용"}</span>
       <button class="link" id="bReload" type="button">새로고침</button>`;
     document.getElementById("bReload").onclick = async () => { await loadAll(); route(); };
   }
   async function commit(mutate, message) {
-    const next = await G.update((data) => mutate(Array.isArray(data) ? data : []), message);
+    const { data: next, mirrorErrors } = await G.update((data) => mutate(Array.isArray(data) ? data : []), message);
+    if (mirrorErrors.length) setTimeout(() => toast("저장은 됐지만 다른 저장소 동기화에 실패했습니다. 설정 → 동기화에서 다시 맞춰 주세요.\n" + mirrorErrors.join("\n"), 8000), 3000);
     rounds = next;
     source = "github";
     loadedAt = new Date();
@@ -768,7 +769,7 @@
 
       <h2>GitHub 연결</h2>
       <div class="card">
-        <p class="muted mt0">데이터 저장 위치: <b>${esc(c.owner)}/${esc(c.repo)}</b> · ${esc(c.branch)} · ${esc(c.path)}</p>
+        <p class="muted mt0">데이터 저장 위치: <b>${esc(c.owner)}/${esc(c.repo)}</b> · ${esc(c.path)} — 저장할 때 <b>${c.mirrors.map((m) => esc(m.owner + "/" + m.repo)).join(", ")}</b>에도 같은 변경을 적용합니다.</p>
         <label class="f">GitHub 토큰 (저장하는 기기에서만 입력)<input id="tok" type="password" autocomplete="off" placeholder="${c.token ? "저장됨 (바꾸려면 새로 입력)" : "github_pat_..."}"></label>
         <div class="row" style="margin-top:10px">
           <button class="btn" id="bTok" type="button">토큰 저장</button>
@@ -777,11 +778,22 @@
         </div>
         <div class="notice" style="margin-top:12px">
           <b>토큰 만드는 법</b> (한 번만): GitHub → Settings → Developer settings → Personal access tokens → <b>Fine-grained tokens</b> → Generate new token<br>
-          · Repository access: <b>Only select repositories → ${esc(c.repo)}</b><br>
+          · Repository access: <b>Only select repositories → ${esc(c.repo)}, ${c.mirrors.map((m) => esc(m.repo)).join(", ")}</b> (두 저장소 모두 선택. 이미 만든 토큰은 Edit에서 저장소를 추가하면 됩니다)<br>
           · Permissions → Repository permissions → <b>Contents: Read and write</b> (나머지는 그대로)<br>
           · 만료 기간은 짧게(예: 90일) 두고 만료되면 다시 만드세요.<br>
           토큰은 이 브라우저에만 저장되고 GitHub 외 다른 곳으로 보내지 않습니다. 공용 PC에서는 입력하지 말고, 쓰고 나면 「토큰 삭제」를 누르세요. 보기만 하는 기기에는 토큰이 필요 없습니다.
         </div>
+      </div>
+
+      <h2>동기화</h2>
+      <div class="card">
+        <div id="syncBox" class="muted">확인 중…</div>
+        <div class="row" style="margin-top:10px">
+          <button class="btn ghost" id="bSyncCheck" type="button">다시 확인</button>
+          <button class="btn ghost" id="bSyncP" type="button" ${G.canWrite() ? "" : "disabled"}>${esc(G.PRIMARY.repo)} 기준으로 맞추기</button>
+          <button class="btn ghost" id="bSyncM" type="button" ${G.canWrite() ? "" : "disabled"}>${esc(G.MIRRORS[0].repo)} 기준으로 맞추기</button>
+        </div>
+        <p class="legend-note">평소에는 저장할 때마다 자동으로 두 저장소에 같이 반영됩니다. 네트워크 오류 등으로 어긋났을 때만 맞추기를 누르세요. 맞추기는 한쪽 내용으로 다른 쪽을 덮어씁니다.</p>
       </div>
 
       <h2>목표 기준값</h2>
@@ -809,6 +821,26 @@
       renderStatus();
       settingsView();
     };
+    const syncCheck = async () => {
+      const box = $("syncBox");
+      box.textContent = "확인 중…";
+      try {
+        const st = await G.syncStatus();
+        box.innerHTML = st.map((x) => `<div>${x.same ? `<span class="ok">● 일치</span>` : `<span class="ng">● 다름</span>`} ${esc(x.path)} ↔ ${esc(x.mirror)}${x.a !== null ? ` (${x.a} / ${x.b}라운드)` : ""}${x.error ? ` <span class="ng">${esc(x.error)}</span>` : ""}</div>`).join("");
+      } catch (e) { box.textContent = "확인 실패: " + e.message; }
+    };
+    syncCheck();
+    $("bSyncCheck").onclick = syncCheck;
+    const doSync = async (from) => {
+      try {
+        for (const p of ["data/rounds.json", "data/settings.json"]) await G.resync(from, p);
+        toast("두 저장소를 맞췄습니다.");
+        await loadAll(true);
+        settingsView();
+      } catch (e) { toast(e.message, 6000); }
+    };
+    $("bSyncP").onclick = () => doSync("primary");
+    $("bSyncM").onclick = () => doSync("mirror");
     $("bTest").onclick = async () => toast((await G.testToken()).msg, 4000);
     $("bTokDel").onclick = () => { G.setCfg({ token: "" }); toast("이 기기에서 토큰을 지웠습니다."); renderStatus(); settingsView(); };
     $("bSaveSet").onclick = async () => {
@@ -818,7 +850,8 @@
       const rt = Number($("rTarget").value);
       if (isNum(rt)) settings.radarTarget = rt;
       try {
-        await G.update(() => settings, "기준값 변경", "data/settings.json");
+        const { mirrorErrors } = await G.update(() => settings, "기준값 변경", "data/settings.json");
+        if (mirrorErrors.length) throw new Error("기준값은 저장했지만 동기화 실패: " + mirrorErrors.join(" / "));
         toast("기준값을 GitHub에 저장했습니다.");
       } catch (e) { toast(e.message, 6000); }
     };

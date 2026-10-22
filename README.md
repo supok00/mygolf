@@ -17,8 +17,8 @@
 - **스마트스코어 붙여넣기 등록**: 네이버 스마트스코어 라운드 텍스트를 붙여 넣으면 골프장·코스·날짜·티오프·홀별 Par/Score를 읽어 등록 (여러 라운드 한 번에, 합계 검증, 기존 골프장명 자동 맞춤, 중복 제외)
 
 ## 데이터
-- 기본값은 **golf-round-web 저장소의 `data/rounds.json`을 함께 씁니다.** 두 웹 어디서 저장해도 양쪽에 보입니다.
-- 저장에는 그 저장소에 대한 fine-grained 토큰(Contents: Read and write)이 필요합니다. 같은 기기에서 golf-round-web에 넣어 둔 토큰이 있으면 처음 열 때 가져옵니다.
+- 라운드는 이 저장소의 `data/rounds.json`에 저장하고, **저장할 때 golf-round-web 저장소의 같은 파일에도 같은 변경을 적용해 동기화**합니다. golf-round-web에서 저장해도 이쪽에 반영됩니다.
+- 저장에는 **mygolf와 golf-round-web 두 저장소 모두**에 Contents 읽기/쓰기 권한이 있는 fine-grained 토큰이 필요합니다. 어긋나면 설정 → 동기화에서 확인하고 맞출 수 있습니다. 같은 기기에서 golf-round-web에 넣어 둔 토큰이 있으면 처음 열 때 가져옵니다.
 
 ## 로컬에서 보기
 ```bash

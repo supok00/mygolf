@@ -1,29 +1,45 @@
-/* GitHub 저장소를 데이터 저장소로 쓴다. (기본: golf-round-web 저장소의 데이터를 함께 쓴다)
- * - 읽기: GitHub API(토큰 없이도 공개 저장소면 가능)로 data/rounds.json 최신본을 받는다.
- *         API 호출 한도(시간당 60회/IP)에 걸리면 같은 사이트의 data/rounds.json(Pages 배포본)을 쓴다.
- * - 쓰기: 이 저장소 전용 토큰(Contents 읽기/쓰기)으로 파일을 커밋한다. 토큰은 이 브라우저에만 저장된다.
+/* GitHub 저장소를 데이터 저장소로 쓴다. 두 저장소(MyGolf, golf-round-web)의 data/를 동기화한다.
+ * - 읽기: 기본 저장소(PRIMARY)의 파일을 GitHub API로 읽는다(공개 저장소라 토큰 없이도 가능).
+ *         API 한도(시간당 60회/IP)에 걸리면 같은 사이트에 배포된 파일을 쓴다.
+ * - 쓰기: 같은 변경(라운드 추가·수정·삭제)을 기본 저장소와 동기화 저장소(MIRRORS)의 최신 파일에 각각 적용해 커밋한다.
+ *         파일 전체를 덮어쓰지 않고 변경만 적용하므로, 다른 쪽에서 먼저 저장한 내용도 지워지지 않는다.
+ * - 토큰은 이 브라우저에만 저장한다. 두 저장소 모두 Contents 읽기/쓰기 권한이 있어야 한다.
  */
 const GitHubStore = (() => {
-  const KEY_CFG = "mygolf.github.v1";
-  // 같은 사이트(supok00.github.io)의 golf-round-web에서 쓰던 설정(토큰 포함)이 있으면 처음 한 번 가져온다
-  try {
-    if (!localStorage.getItem(KEY_CFG) && localStorage.getItem("golf.github.v1")) localStorage.setItem(KEY_CFG, localStorage.getItem("golf.github.v1"));
-  } catch { /* 저장소 사용 불가 */ }
-  const DEFAULT = { owner: "supok00", repo: "golf-round-web", branch: "main", path: "data/rounds.json", token: "" };
+  // ── 이 웹의 저장소 설정 ──
+  const APP_KEY = "mygolf";
+  const PRIMARY = { owner: "supok00", repo: "mygolf", branch: "main" };
+  const MIRRORS = [{ owner: "supok00", repo: "golf-round-web", branch: "main" }];
+  const ROUNDS = "data/rounds.json";
 
+  const KEY_CFG = APP_KEY + ".github.v1";
+  const KEY_PENDING = APP_KEY + ".syncPending.v1";
+  // 같은 사이트(supok00.github.io)의 다른 골프 웹에 넣어 둔 토큰이 있으면 처음 한 번 가져온다
+  try {
+    if (!localStorage.getItem(KEY_CFG)) {
+      for (const k of ["mygolf.github.v1", "golf.github.v1"]) {
+        const t = (JSON.parse(localStorage.getItem(k)) || {}).token;
+        if (t) { localStorage.setItem(KEY_CFG, JSON.stringify({ token: t })); break; }
+      }
+    }
+  } catch { /* 저장소 사용 불가 */ }
+
+  // 저장소 위치는 코드에서 정하고, 브라우저에는 토큰만 둔다
   function cfg() {
-    try { return { ...DEFAULT, ...(JSON.parse(localStorage.getItem(KEY_CFG)) || {}) }; } catch { return { ...DEFAULT }; }
+    let token = "";
+    try { token = (JSON.parse(localStorage.getItem(KEY_CFG)) || {}).token || ""; } catch { /* 무시 */ }
+    return { ...PRIMARY, path: ROUNDS, token, mirrors: MIRRORS };
   }
   function setCfg(c) {
-    try { localStorage.setItem(KEY_CFG, JSON.stringify({ ...cfg(), ...c })); return true; } catch { return false; }
+    try { localStorage.setItem(KEY_CFG, JSON.stringify({ token: c.token ?? cfg().token })); return true; } catch { return false; }
   }
   const canWrite = () => !!cfg().token;
+  const label = (r) => `${r.owner}/${r.repo}`;
 
   // UTF-8 ↔ base64 (한글이 들어 있어 atob/btoa만으로는 깨진다)
   function b64decode(b64) {
     const bin = atob(b64.replace(/\n/g, ""));
-    const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
-    return new TextDecoder().decode(bytes);
+    return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
   }
   function b64encode(str) {
     const bytes = new TextEncoder().encode(str);
@@ -31,85 +47,120 @@ const GitHubStore = (() => {
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
     return btoa(bin);
   }
-
-  function apiUrl(c, path = c.path) {
-    return `https://api.github.com/repos/${c.owner}/${c.repo}/contents/${path}`;
-  }
-  function headers(c) {
+  const apiUrl = (r, path) => `https://api.github.com/repos/${r.owner}/${r.repo}/contents/${path}`;
+  function headers() {
     const h = { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-    if (c.token) h.Authorization = `Bearer ${c.token}`;
+    const t = cfg().token;
+    if (t) h.Authorization = `Bearer ${t}`;
     return h;
   }
 
-  // 반환: { data, sha, source: 'github' | 'pages' }
+  // 한 저장소에서 파일 읽기 → { data, sha, missing }
+  async function readRepo(r, path) {
+    const res = await fetch(`${apiUrl(r, path)}?ref=${encodeURIComponent(r.branch)}&t=${Date.now()}`, { headers: headers(), cache: "no-store" });
+    if (res.status === 404) return { data: null, sha: null, missing: true };
+    if (res.status === 401) throw new Error("토큰이 올바르지 않거나 만료되었습니다(401).");
+    if (!res.ok) { const e = new Error(`${label(r)} 읽기 실패 (${res.status})`); e.status = res.status; throw e; }
+    const j = await res.json();
+    const text = j.content ? b64decode(j.content) : await (await fetch(j.download_url, { cache: "no-store" })).text();
+    return { data: JSON.parse(text), sha: j.sha, missing: false };
+  }
+
+  // 화면용 읽기: 기본 저장소 → (실패 시) 배포본
   async function load(path) {
-    const c = cfg();
-    const p = path || c.path;
+    const p = path || ROUNDS;
     try {
-      const res = await fetch(`${apiUrl(c, p)}?ref=${encodeURIComponent(c.branch)}&t=${Date.now()}`, { headers: headers(c), cache: "no-store" });
-      if (res.ok) {
-        const j = await res.json();
-        // 1MB 넘는 파일은 content가 비어 오므로 download_url로 다시 받는다
-        const text = j.content ? b64decode(j.content) : await (await fetch(j.download_url, { cache: "no-store" })).text();
-        return { data: JSON.parse(text), sha: j.sha, source: "github" };
-      }
-      // 404: 아직 파일이 없음 → sha 없이 새로 만들 수 있게 표시하고, 보기용으로는 배포본을 쓴다
-      if (res.status === 404) {
-        const fb = await fetch(`${p}?t=${Date.now()}`, { cache: "no-store" }).catch(() => null);
-        return { data: fb && fb.ok ? await fb.json() : null, sha: null, source: "github", missing: true };
-      }
-      if (res.status === 401) throw new Error("토큰이 올바르지 않거나 만료되었습니다(401).");
+      const r = await readRepo(PRIMARY, p);
+      if (!r.missing) return { ...r, source: "github" };
     } catch (e) {
       if (String(e.message).includes("401")) throw e;
     }
-    const res = await fetch(`${p}?t=${Date.now()}`, { cache: "no-store" });
-    if (!res.ok) return { data: null, sha: null, source: "pages" };
-    return { data: await res.json(), sha: null, source: "pages" };
+    const res = await fetch(`${p}?t=${Date.now()}`, { cache: "no-store" }).catch(() => null);
+    return { data: res && res.ok ? await res.json() : null, sha: null, source: "pages" };
   }
 
-  async function put(path, obj, sha, message) {
-    const c = cfg();
-    const res = await fetch(apiUrl(c, path), {
+  async function putRepo(r, path, obj, sha, message) {
+    const res = await fetch(apiUrl(r, path), {
       method: "PUT",
-      headers: { ...headers(c), "Content-Type": "application/json" },
-      body: JSON.stringify({ message, content: b64encode(JSON.stringify(obj, null, 1) + "\n"), sha: sha || undefined, branch: c.branch }),
+      headers: { ...headers(), "Content-Type": "application/json" },
+      body: JSON.stringify({ message, content: b64encode(JSON.stringify(obj, null, 1) + "\n"), sha: sha || undefined, branch: r.branch }),
     });
-    if (res.ok) return (await res.json()).content.sha;
-    const err = new Error(`GitHub 저장 실패 (${res.status})`);
+    if (res.ok) return;
+    const err = new Error(`${label(r)} 저장 실패 (${res.status})`);
     err.status = res.status;
-    try { err.detail = (await res.json()).message; } catch { /* 본문 없음 */ }
     throw err;
   }
 
-  /* 변경 함수(mutate)를 최신본에 적용해 커밋한다.
-   * 다른 기기에서 먼저 저장해 sha가 바뀌었으면(409/422) 최신본을 다시 받아 같은 변경을 한 번 더 적용한다. */
-  async function update(mutate, message, path) {
-    const c = cfg();
-    const p = path || c.path;
-    if (!c.token) throw new Error("GitHub 토큰이 없습니다. 설정에서 토큰을 넣어 주세요.");
+  // 한 저장소에 변경 적용. 다른 기기가 먼저 저장해 sha가 바뀌었으면(409/422) 최신본에 다시 적용
+  async function updateRepo(r, mutate, message, path) {
     for (let attempt = 0; attempt < 3; attempt++) {
-      const cur = await load(p);
-      if (cur.source !== "github") throw new Error("GitHub에서 최신 데이터를 읽지 못했습니다.");
+      const cur = await readRepo(r, path);
       const next = mutate(cur.missing ? null : cur.data);
       try {
-        await put(p, next, cur.sha, message);
+        await putRepo(r, path, next, cur.sha, message);
         return next;
       } catch (e) {
         if (e.status === 409 || e.status === 422) continue;
-        if (e.status === 401 || e.status === 403) throw new Error("토큰 권한이 없습니다. 이 저장소의 Contents 읽기/쓰기 권한이 있는 토큰인지 확인하세요.");
+        if (e.status === 401 || e.status === 403 || e.status === 404) throw new Error(`${label(r)}에 쓸 권한이 없습니다. 토큰에 이 저장소의 Contents 읽기/쓰기 권한을 추가하세요.`);
         throw e;
       }
     }
-    throw new Error("다른 기기와 동시에 저장되어 충돌했습니다. 잠시 후 다시 저장하세요.");
+    throw new Error(`${label(r)}: 다른 기기와 동시에 저장되어 충돌했습니다. 잠시 후 다시 저장하세요.`);
   }
+
+  /* 기본 저장소에 저장한 뒤 동기화 저장소에도 같은 변경을 적용한다.
+   * 동기화 쪽이 실패하면 기본 저장소 결과는 그대로 두고 '동기화 필요' 표시를 남긴다. 반환: { data, mirrorErrors } */
+  async function update(mutate, message, path) {
+    if (!canWrite()) throw new Error("GitHub 토큰이 없습니다. 설정에서 토큰을 넣어 주세요.");
+    const p = path || ROUNDS;
+    const data = await updateRepo(PRIMARY, mutate, message, p);
+    const mirrorErrors = [];
+    for (const m of MIRRORS) {
+      try { await updateRepo(m, mutate, message + ` (${PRIMARY.repo}에서 동기화)`, p); } catch (e) { mirrorErrors.push(e.message); }
+    }
+    try {
+      if (mirrorErrors.length) localStorage.setItem(KEY_PENDING, "1");
+    } catch { /* 무시 */ }
+    return { data, mirrorErrors };
+  }
+
+  // 동기화 상태: 두 저장소 파일이 같은지 비교
+  async function syncStatus() {
+    const out = [];
+    for (const path of [ROUNDS, "data/settings.json"]) {
+      const a = await readRepo(PRIMARY, path).catch((e) => ({ error: e.message }));
+      for (const m of MIRRORS) {
+        const b = await readRepo(m, path).catch((e) => ({ error: e.message }));
+        const same = !a.error && !b.error && JSON.stringify(a.data) === JSON.stringify(b.data);
+        const count = (x) => (Array.isArray(x?.data) ? x.data.length : null);
+        out.push({ path, mirror: label(m), same, a: count(a), b: count(b), error: a.error || b.error || null });
+      }
+    }
+    return out;
+  }
+
+  // 한쪽 내용으로 다른 쪽을 맞춘다. from: "primary" | "mirror"
+  async function resync(from, path) {
+    if (!canWrite()) throw new Error("GitHub 토큰이 없습니다.");
+    const m = MIRRORS[0];
+    const [src, dst] = from === "primary" ? [PRIMARY, m] : [m, PRIMARY];
+    const s = await readRepo(src, path);
+    if (s.missing) throw new Error(`${label(src)}에 ${path}가 없습니다.`);
+    await updateRepo(dst, () => s.data, `${label(src)} 기준으로 데이터 동기화`, path);
+    try { localStorage.removeItem(KEY_PENDING); } catch { /* 무시 */ }
+  }
+  const pending = () => { try { return localStorage.getItem(KEY_PENDING) === "1"; } catch { return false; } };
 
   async function testToken() {
-    const c = cfg();
-    const res = await fetch(`https://api.github.com/repos/${c.owner}/${c.repo}`, { headers: headers(c) });
-    if (!res.ok) return { ok: false, msg: `저장소 접근 실패 (${res.status})` };
-    const j = await res.json();
-    return j.permissions && j.permissions.push ? { ok: true, msg: "저장 권한 확인됨" } : { ok: false, msg: "읽기만 가능한 토큰입니다(쓰기 권한 없음)" };
+    const results = [];
+    for (const r of [PRIMARY, ...MIRRORS]) {
+      const res = await fetch(`https://api.github.com/repos/${r.owner}/${r.repo}`, { headers: headers() });
+      const j = res.ok ? await res.json() : {};
+      results.push(`${r.repo}: ${res.ok && j.permissions && j.permissions.push ? "쓰기 가능" : "쓰기 권한 없음"}`);
+    }
+    const ok = results.every((x) => x.endsWith("쓰기 가능"));
+    return { ok, msg: (ok ? "두 저장소 모두 저장 권한 확인됨" : "권한 확인 필요 — ") + " (" + results.join(", ") + ")" };
   }
 
-  return { cfg, setCfg, canWrite, load, update, testToken, DEFAULT };
+  return { cfg, setCfg, canWrite, load, update, syncStatus, resync, pending, testToken, PRIMARY, MIRRORS };
 })();

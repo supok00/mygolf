@@ -1,0 +1,5571 @@
+[
+ {
+  "id": "r20231013-5",
+  "date": "2023-10-13",
+  "course": "남여주GC",
+  "front": "마루",
+  "back": "누리",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20231207-6",
+  "date": "2023-12-07",
+  "course": "은화삼CC",
+  "front": "EAST",
+  "back": "WEST",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240307-7",
+  "date": "2024-03-07",
+  "course": "캐슬파인GC",
+  "front": "밸리",
+  "back": "레이크",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240405-8",
+  "date": "2024-04-05",
+  "course": "남여주GC",
+  "front": "가람",
+  "back": "마루",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 2
+   }
+  ]
+ },
+ {
+  "id": "r20240428-9",
+  "date": "2024-04-28",
+  "course": "아세코밸리GC",
+  "front": "",
+  "back": "",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만), 코스명 없음",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": -1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240621-10",
+  "date": "2024-06-21",
+  "course": "뉴서울CC",
+  "front": "예술 Out",
+  "back": "예술 In",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240714-11",
+  "date": "2024-07-14",
+  "course": "써닝포인트CC",
+  "front": "",
+  "back": "",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만), 코스명 없음",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 6,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240817-12",
+  "date": "2024-08-17",
+  "course": "드림파크CC",
+  "front": "",
+  "back": "",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만), 코스명 없음",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20240925-13",
+  "date": "2024-09-25",
+  "course": "센추리21CC",
+  "front": "Valley",
+  "back": "Mountain",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20241001-14",
+  "date": "2024-10-01",
+  "course": "에덴블루CC",
+  "front": "레이크",
+  "back": "밸리",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": -1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 3
+   }
+  ]
+ },
+ {
+  "id": "r20241011-15",
+  "date": "2024-10-11",
+  "course": "캐슬파인GC",
+  "front": "밸리",
+  "back": "레이크",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20241108-16",
+  "date": "2024-11-08",
+  "course": "양지파인CC",
+  "front": "남",
+  "back": "동",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 3,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20250119-17",
+  "date": "2025-01-19",
+  "course": "안성베네스트GC",
+  "front": "East",
+  "back": "South",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20250222-18",
+  "date": "2025-02-22",
+  "course": "인천그랜드CC",
+  "front": "IN",
+  "back": "OUT",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20250314-19",
+  "date": "2025-03-14",
+  "course": "캐슬파인GC",
+  "front": "레이크",
+  "back": "밸리",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20250411-20",
+  "date": "2025-04-11",
+  "course": "포웰CC 안성",
+  "front": "Oak Hill",
+  "back": "Birch Hill",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20250418-21",
+  "date": "2025-04-18",
+  "course": "드림파크CC",
+  "front": "PARK OUT",
+  "back": "PARK IN",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20250524-22",
+  "date": "2025-05-24",
+  "course": "에덴블루CC",
+  "front": "마운틴",
+  "back": "레이크",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 2
+   }
+  ]
+ },
+ {
+  "id": "r20250608-23",
+  "date": "2025-06-08",
+  "course": "무등산CC",
+  "front": "지왕봉",
+  "back": "인왕봉",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": -1
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20250609-24",
+  "date": "2025-06-09",
+  "course": "무등산CC",
+  "front": "천왕봉",
+  "back": "인왕봉",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20250926-25",
+  "date": "2025-09-26",
+  "course": "드림파크CC",
+  "front": "DREAM OUT",
+  "back": "DREAM IN",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 5
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20251017-26",
+  "date": "2025-10-17",
+  "course": "벨라45CC",
+  "front": "오너스A",
+  "back": "오너스B",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20251023-27",
+  "date": "2025-10-23",
+  "course": "레이크사이드CC",
+  "front": "남 Out",
+  "back": "남 In",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20251107-28",
+  "date": "2025-11-07",
+  "course": "마이다스레이크 이천",
+  "front": "Olympus",
+  "back": "Titan",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20251121-29",
+  "date": "2025-11-21",
+  "course": "드림파크CC",
+  "front": "PARK OUT",
+  "back": "PARK IN",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260311-30",
+  "date": "2026-03-11",
+  "course": "라헨느",
+  "front": "Lake COURSE (Out)",
+  "back": "Ocean COURSE (In)",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 379,
+    "hcp": 4,
+    "score": 2,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 317,
+    "hcp": 18,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 6,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "dist": 514,
+    "hcp": 12,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "dist": 149,
+    "hcp": 16,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 20,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "dist": 340,
+    "hcp": 8,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 3,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "dist": 143,
+    "hcp": 14,
+    "score": 2,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 312,
+    "hcp": 10,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 4,
+    "sg": 1,
+    "pen": 1
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "dist": 523,
+    "hcp": 6,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 25,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "dist": 406,
+    "hcp": 2,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 375,
+    "hcp": 1,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "dist": 545,
+    "hcp": 5,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "dist": 172,
+    "hcp": 13,
+    "score": 0,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 25,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 328,
+    "hcp": 14,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 2,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 346,
+    "hcp": 17,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 7,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "dist": 153,
+    "hcp": 15,
+    "score": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "dist": 480,
+    "hcp": 3,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 3,
+    "fp": 20,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "dist": 331,
+    "hcp": 9,
+    "score": 0,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 10,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 338,
+    "hcp": 7,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 10,
+    "sg": 0,
+    "pen": 1
+   }
+  ]
+ },
+ {
+  "id": "r20260312-31",
+  "date": "2026-03-12",
+  "course": "해비치",
+  "front": "스카이 COURSE (Out)",
+  "back": "팜 COURSE (In)",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 340,
+    "hcp": 6,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 3,
+    "dist": 151,
+    "hcp": 9,
+    "score": 2,
+    "miss": "-",
+    "gir": 0,
+    "putts": 3,
+    "fp": 8,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "dist": 301,
+    "hcp": 7,
+    "score": 2,
+    "fw": 0,
+    "miss": "-",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "dist": 479,
+    "hcp": 1,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "dist": 369,
+    "hcp": 3,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 15,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "dist": 326,
+    "hcp": 4,
+    "score": 1,
+    "fw": 1,
+    "miss": "-",
+    "gir": 0,
+    "putts": 2,
+    "fp": 12,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "dist": 123,
+    "hcp": 8,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "dist": 496,
+    "hcp": 2,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "dist": 309,
+    "hcp": 5,
+    "score": 4,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 335,
+    "hcp": 3,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 20,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "dist": 344,
+    "hcp": 5,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "dist": 117,
+    "hcp": 6,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 1,
+    "fp": 5,
+    "sg": 1,
+    "pen": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 328,
+    "hcp": 7,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "dist": 447,
+    "hcp": 8,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 1,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "dist": 292,
+    "hcp": 4,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "dist": 374,
+    "hcp": 1,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "dist": 156,
+    "hcp": 2,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 493,
+    "hcp": 9,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260313-32",
+  "date": "2026-03-13",
+  "course": "엘리시안제주",
+  "front": "Pine COURSE (Out)",
+  "back": "Lake COURSE (In)",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 358,
+    "hcp": 6,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 344,
+    "hcp": 3,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "dist": 160,
+    "hcp": 7,
+    "score": 3,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "dist": 316,
+    "hcp": 8,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 15,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "dist": 455,
+    "hcp": 9,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "dist": 366,
+    "hcp": 2,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 1,
+    "fp": 6,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "dist": 148,
+    "hcp": 4,
+    "score": 0,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 22,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "dist": 347,
+    "hcp": 1,
+    "score": 2,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "dist": 482,
+    "hcp": 5,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "dist": 297,
+    "hcp": 9,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 8,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "dist": 145,
+    "hcp": 4,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 5,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "dist": 349,
+    "hcp": 1,
+    "score": 2,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 9,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 438,
+    "hcp": 8,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 8,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 332,
+    "hcp": 7,
+    "score": 4,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 3,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "dist": 482,
+    "hcp": 2,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 3,
+    "dist": 142,
+    "hcp": 6,
+    "score": 2,
+    "miss": "R",
+    "gir": 0,
+    "putts": 4,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "dist": 369,
+    "hcp": 3,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 322,
+    "hcp": 5,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260327-33",
+  "date": "2026-03-27",
+  "course": "빅토리아CC",
+  "front": "(Out)",
+  "back": "(IN)",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 353,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 3,
+    "dist": 157,
+    "score": 2,
+    "miss": "S",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 3,
+    "par": 5,
+    "dist": 516,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 8,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "dist": 308,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 8,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "dist": 347,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "dist": 496,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 30,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 353,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 15,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "dist": 348,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 15,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 3,
+    "dist": 150,
+    "score": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 353,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 14,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "dist": 157,
+    "score": 2,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "dist": 516,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 308,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 12,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 347,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "dist": 496,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 12,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "dist": 353,
+    "score": 0,
+    "fw": 1,
+    "miss": "S",
+    "gir": 1,
+    "putts": 2,
+    "fp": 12,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "dist": 348,
+    "score": 0,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 1,
+    "fp": 2,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 3,
+    "dist": 150,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260410-34",
+  "date": "2026-04-10",
+  "course": "더헤븐CC",
+  "front": "West",
+  "back": "East",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 343,
+    "score": 1,
+    "fw": 1,
+    "miss": "S",
+    "gir": 0,
+    "putts": 2,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 318,
+    "score": 2,
+    "fw": 0,
+    "gir": 0,
+    "putts": 2,
+    "fp": 8,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "dist": 314,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "dist": 425,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 7,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "dist": 155,
+    "score": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 16,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "dist": 425,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 308,
+    "score": 0,
+    "fw": 1,
+    "gir": 1,
+    "putts": 2,
+    "fp": 20,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "dist": 99,
+    "score": 0,
+    "gir": 1,
+    "putts": 2,
+    "fp": 5,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "dist": 294,
+    "score": 0,
+    "fw": 1,
+    "gir": 1,
+    "putts": 1,
+    "fp": 8,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 329,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "dist": 316,
+    "score": 0,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 10,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "dist": 427,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "dist": 101,
+    "score": 0,
+    "miss": "S",
+    "gir": 1,
+    "putts": 2,
+    "fp": 6,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 323,
+    "score": 1,
+    "fw": 1,
+    "miss": "S",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "dist": 294,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 3,
+    "dist": 149,
+    "score": 0,
+    "gir": 1,
+    "putts": 2,
+    "fp": 15,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 5,
+    "dist": 457,
+    "score": 0,
+    "fw": 1,
+    "gir": 1,
+    "putts": 1,
+    "fp": 3,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 327,
+    "score": 1,
+    "fw": 1,
+    "gir": 0,
+    "putts": 1,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260417-35",
+  "date": "2026-04-17",
+  "course": "레이크사이드CC",
+  "front": "West",
+  "back": "East",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "dist": 483,
+    "hcp": 0,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 357,
+    "hcp": 1,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "dist": 133,
+    "hcp": 1,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "dist": 348,
+    "hcp": 1,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 15,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "dist": 361,
+    "hcp": 2,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 6,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "dist": 128,
+    "hcp": 1,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 344,
+    "hcp": 3,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "dist": 478,
+    "hcp": 1,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 20,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "dist": 299,
+    "hcp": 1,
+    "score": 1,
+    "fw": 1,
+    "miss": "S",
+    "gir": 0,
+    "putts": 2,
+    "fp": 7,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 378,
+    "hcp": 0,
+    "score": 0,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 6,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "dist": 516,
+    "hcp": 2,
+    "score": 2,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 1,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "dist": 143,
+    "hcp": 1,
+    "score": 2,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 345,
+    "hcp": 0,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 15,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 400,
+    "hcp": 1,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "dist": 501,
+    "hcp": 1,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "dist": 340,
+    "hcp": 4,
+    "score": 4,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 18,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "dist": 167,
+    "hcp": 2,
+    "score": 3,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 25,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 298,
+    "hcp": 1,
+    "score": 1,
+    "fw": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 20,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260425-36",
+  "date": "2026-04-25",
+  "course": "솔라고CC",
+  "front": "SOL-IN",
+  "back": "SOL-OUT",
+  "tee": "White",
+  "memo": "기존 엑셀에서 옮긴 기록",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "dist": 326,
+    "score": 0,
+    "fw": 1,
+    "miss": "L",
+    "gir": 1,
+    "putts": 2,
+    "fp": 9,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 465,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 1,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "dist": 155,
+    "score": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "dist": 317,
+    "score": 3,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 5,
+    "sg": 0,
+    "pen": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "dist": 335,
+    "score": 1,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 13,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "dist": 336,
+    "score": 2,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 12,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 343,
+    "score": 2,
+    "fw": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 5,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 8,
+    "par": 5,
+    "dist": 143,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 2,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "dist": 433,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 15,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 308,
+    "score": 0,
+    "fw": 1,
+    "miss": "R",
+    "gir": 1,
+    "putts": 2,
+    "fp": 10,
+    "sg": 1,
+    "pen": 0
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "dist": 487,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 13,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "dist": 328,
+    "score": 1,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 10,
+    "sg": 0,
+    "pen": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "dist": 343,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 1,
+    "fp": 3,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 128,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 2,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "dist": 491,
+    "score": 1,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 4,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "dist": 157,
+    "score": 2,
+    "fw": 0,
+    "miss": "L",
+    "gir": 0,
+    "putts": 3,
+    "fp": 9,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "dist": 327,
+    "score": 1,
+    "miss": "R",
+    "gir": 0,
+    "putts": 2,
+    "fp": 6,
+    "sg": 0,
+    "pen": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 334,
+    "score": 1,
+    "fw": 0,
+    "miss": "R",
+    "gir": 0,
+    "putts": 3,
+    "fp": 7,
+    "sg": 0,
+    "pen": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260507-37",
+  "date": "2026-05-07",
+  "course": "시그너스",
+  "front": "실크",
+  "back": "코튼",
+  "tee": "White",
+  "memo": "",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 3
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260529-38",
+  "date": "2026-05-29",
+  "course": "골프존카운티 안성W",
+  "front": "OUT",
+  "back": "IN",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 2
+   }
+  ]
+ },
+ {
+  "id": "r20260616-39",
+  "date": "2026-06-16",
+  "course": "로제비앙 곤지암",
+  "front": "네오",
+  "back": "로제",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 15,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20260623-40",
+  "date": "2026-06-23",
+  "course": "로얄링스CC",
+  "front": "Queens In",
+  "back": "Queens Out",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260715-41",
+  "date": "2026-07-15",
+  "course": "신라CC",
+  "front": "서",
+  "back": "남",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 4
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20260724-42",
+  "date": "2026-07-24",
+  "course": "캐슬파인GC",
+  "front": "레이크",
+  "back": "밸리",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 3
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260731-43",
+  "date": "2026-07-31",
+  "course": "마이다스레이크 이천",
+  "front": "Olympus",
+  "back": "Titan",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 5,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20260821-44",
+  "date": "2026-08-21",
+  "course": "뉴서울CC",
+  "front": "문화 Out",
+  "back": "문화 In",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 13,
+    "par": 5,
+    "score": -1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": -1
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 1
+   }
+  ]
+ },
+ {
+  "id": "r20260829-45",
+  "date": "2026-08-29",
+  "course": "기흥CC",
+  "front": "NORTH",
+  "back": "WEST",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 7,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 3,
+    "score": -1
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "score": -1
+   },
+   {
+    "h": 15,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20260918-46",
+  "date": "2026-09-18",
+  "course": "오크힐스CC",
+  "front": "브릿지",
+  "back": "힐",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 4
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 12,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 13,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 14,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "score": 3
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 2
+   }
+  ]
+ },
+ {
+  "id": "r20261017-47",
+  "date": "2026-10-17",
+  "course": "시그너스",
+  "front": "라미",
+  "back": "실크",
+  "tee": "White",
+  "memo": "네이버 스마트스코어에서 옮김 (홀별 Par·Score만)",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 2
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 2
+   },
+   {
+    "h": 9,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 10,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 12,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 14,
+    "par": 5,
+    "score": 2
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 16,
+    "par": 3,
+    "score": 0
+   },
+   {
+    "h": 17,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20261018-48",
+  "date": "2026-10-18",
+  "course": "양주CC",
+  "front": "동",
+  "back": "서",
+  "tee": "White",
+  "memo": "10홀 부분 라운드(전반 41 + 후반 1홀 4 = 45). 홀별 Par는 이미지에 없어 비움",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 3,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 4,
+    "par": 4,
+    "score": 1
+   },
+   {
+    "h": 5,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 6,
+    "par": 3,
+    "score": 1
+   },
+   {
+    "h": 7,
+    "par": 5,
+    "score": 1
+   },
+   {
+    "h": 8,
+    "par": 4,
+    "score": 0
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "score": 0
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "score": 0
+   }
+  ]
+ },
+ {
+  "id": "r20261023-mviwv376",
+  "date": "2026-10-23",
+  "course": "드림파크CC",
+  "front": "드림OUT",
+  "back": "드림IN",
+  "tee": "White",
+  "memo": "",
+  "holes": [
+   {
+    "h": 1,
+    "par": 4,
+    "dist": 355,
+    "hcp": 11,
+    "score": 0
+   },
+   {
+    "h": 2,
+    "par": 4,
+    "dist": 360,
+    "hcp": 3
+   },
+   {
+    "h": 3,
+    "par": 4,
+    "dist": 320,
+    "hcp": 17
+   },
+   {
+    "h": 4,
+    "par": 5,
+    "dist": 520,
+    "hcp": 1
+   },
+   {
+    "h": 5,
+    "par": 3,
+    "dist": 210,
+    "hcp": 9
+   },
+   {
+    "h": 6,
+    "par": 4,
+    "dist": 340,
+    "hcp": 15
+   },
+   {
+    "h": 7,
+    "par": 4,
+    "dist": 350,
+    "hcp": 5
+   },
+   {
+    "h": 8,
+    "par": 3,
+    "dist": 195,
+    "hcp": 13
+   },
+   {
+    "h": 9,
+    "par": 5,
+    "dist": 495,
+    "hcp": 7
+   },
+   {
+    "h": 10,
+    "par": 4,
+    "dist": 375,
+    "hcp": 8
+   },
+   {
+    "h": 11,
+    "par": 4,
+    "dist": 385,
+    "hcp": 6
+   },
+   {
+    "h": 12,
+    "par": 5,
+    "dist": 510,
+    "hcp": 2
+   },
+   {
+    "h": 13,
+    "par": 3,
+    "dist": 195,
+    "hcp": 18
+   },
+   {
+    "h": 14,
+    "par": 4,
+    "dist": 360,
+    "hcp": 12
+   },
+   {
+    "h": 15,
+    "par": 4,
+    "dist": 340,
+    "hcp": 16
+   },
+   {
+    "h": 16,
+    "par": 5,
+    "dist": 574,
+    "hcp": 4
+   },
+   {
+    "h": 17,
+    "par": 3,
+    "dist": 175,
+    "hcp": 14
+   },
+   {
+    "h": 18,
+    "par": 4,
+    "dist": 370,
+    "hcp": 10
+   }
+  ]
+ }
+]

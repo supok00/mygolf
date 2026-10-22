@@ -186,3 +186,4 @@ ul.desc li { margin: 2px 0; }
 .pastebox { width: 100%; min-height: 220px; font-size: 14px; font-family: ui-monospace, Menlo, monospace; }
 .oneline { font-size: 15px; line-height: 1.8; }
 .oneline b { color: var(--green); }
+.toast { white-space: pre-line; max-width: 92vw; }
