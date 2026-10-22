@@ -5460,110 +5460,110 @@
    {
     "h": 1,
     "par": 4,
-    "dist": 355,
+    "dist": 326,
     "hcp": 11,
     "score": 0
    },
    {
     "h": 2,
     "par": 4,
-    "dist": 360,
+    "dist": 329,
     "hcp": 3
    },
    {
     "h": 3,
     "par": 4,
-    "dist": 320,
+    "dist": 275,
     "hcp": 17
    },
    {
     "h": 4,
     "par": 5,
-    "dist": 520,
+    "dist": 492,
     "hcp": 1
    },
    {
     "h": 5,
     "par": 3,
-    "dist": 210,
+    "dist": 181,
     "hcp": 9
    },
    {
     "h": 6,
     "par": 4,
-    "dist": 340,
+    "dist": 312,
     "hcp": 15
    },
    {
     "h": 7,
     "par": 4,
-    "dist": 350,
+    "dist": 325,
     "hcp": 5
    },
    {
     "h": 8,
     "par": 3,
-    "dist": 195,
+    "dist": 149,
     "hcp": 13
    },
    {
     "h": 9,
     "par": 5,
-    "dist": 495,
+    "dist": 469,
     "hcp": 7
    },
    {
     "h": 10,
     "par": 4,
-    "dist": 375,
+    "dist": 352,
     "hcp": 8
    },
    {
     "h": 11,
     "par": 4,
-    "dist": 385,
+    "dist": 354,
     "hcp": 6
    },
    {
     "h": 12,
     "par": 5,
-    "dist": 510,
+    "dist": 481,
     "hcp": 2
    },
    {
     "h": 13,
     "par": 3,
-    "dist": 195,
+    "dist": 165,
     "hcp": 18
    },
    {
     "h": 14,
     "par": 4,
-    "dist": 360,
+    "dist": 318,
     "hcp": 12
    },
    {
     "h": 15,
     "par": 4,
-    "dist": 340,
+    "dist": 274,
     "hcp": 16
    },
    {
     "h": 16,
     "par": 5,
-    "dist": 574,
+    "dist": 544,
     "hcp": 4
    },
    {
     "h": 17,
     "par": 3,
-    "dist": 175,
+    "dist": 149,
     "hcp": 14
    },
    {
     "h": 18,
     "par": 4,
-    "dist": 370,
+    "dist": 311,
     "hcp": 10
    }
   ]
