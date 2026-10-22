@@ -41,49 +41,49 @@
  "targets": {
   "strokes": {
    "label": "평균 타수",
-   "v": 89,
+   "v": 85,
    "low": true,
    "fmt": "1"
   },
   "parlow": {
    "label": "파 이하 홀 수",
-   "v": 6,
+   "v": 8,
    "low": false,
    "fmt": "1"
   },
   "dbl": {
    "label": "더블보기+ 홀 수",
-   "v": 3,
+   "v": 4,
    "low": true,
    "fmt": "1"
   },
   "putts": {
    "label": "퍼트 수",
-   "v": 33,
+   "v": 36,
    "low": true,
    "fmt": "1"
   },
   "p3": {
    "label": "3퍼트 수",
-   "v": 2,
+   "v": 3,
    "low": true,
    "fmt": "1"
   },
   "girp": {
    "label": "GIR",
-   "v": 0.25,
+   "v": 0.3,
    "low": false,
    "fmt": "%"
   },
   "fwp": {
    "label": "FW 안착",
-   "v": 0.5,
+   "v": 0.6,
    "low": false,
    "fmt": "%"
   },
   "scrp": {
    "label": "스크램블",
-   "v": 0.25,
+   "v": 0.3,
    "low": false,
    "fmt": "%"
   },
