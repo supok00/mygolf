@@ -419,7 +419,8 @@
       const hs = holesArr();
       if (!m.date || !m.course) return toast("날짜와 골프장을 입력하세요.");
       if (!hs.some((h) => isNum(h.score))) return toast("스코어를 한 홀 이상 입력하세요.");
-      const obj = { id: edit ? edit.id : "r" + m.date.replaceAll("-", "") + "-" + Date.now().toString(36), ...m, holes: hs };
+      // 수정할 때 입력 화면에 없는 값(티오프 시간 등)은 그대로 둔다
+      const obj = { ...(edit || {}), id: edit ? edit.id : "r" + m.date.replaceAll("-", "") + "-" + Date.now().toString(36), ...m, holes: hs };
       $("bSave").disabled = true;
       $("bSave").textContent = "저장 중…";
       try {
