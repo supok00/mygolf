@@ -100,7 +100,8 @@
     const src = { github: "GitHub 최신본", pages: "배포본(최대 몇 분 늦을 수 있음)", cache: "이 기기 캐시(오프라인)" }[source] || "-";
     el.innerHTML = `${G.pending() ? `<a class="ng" href="#/settings" style="color:#ffd2cc;font-weight:700">⚠ 동기화 필요</a>` : ""}<span>데이터: ${src}${loadedAt ? " · " + loadedAt.toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" }) : ""}</span>
       <span class="${G.canWrite() ? "ok" : "muted"}">${G.canWrite() ? "● 저장 가능" : "○ 읽기 전용"}</span>
-      <button class="link" id="bReload" type="button">새로고침</button>`;
+      <button class="link" id="bReload" type="button">새로고침</button>
+      <a class="ver" href="#/settings" title="버전 · 변경 내역">v${APP_VERSION}</a>`;
     document.getElementById("bReload").onclick = async () => { await loadAll(); route(); };
   }
   async function commit(mutate, message) {
@@ -863,6 +864,10 @@
       <div class="row" style="margin-top:10px"><button class="btn" id="bSaveClubs" type="button" ${G.canWrite() ? "" : "disabled"}>클럽 거리 GitHub에 저장</button><button class="btn ghost" id="bClubDefault" type="button">예시값으로</button></div>
       <p class="legend-note">저장하면 라운드 입력의 <b>공략 가이드</b>와 상세 분석 <b>⑨ 예상 어프로치 클럽별</b>에 쓰입니다. 안 쓰는 클럽은 「사용」을 끄세요.</p>
 
+      <h2>버전 <span class="muted">v${APP_VERSION}</span></h2>
+      <div class="card">${APP_CHANGES.map((c) => `<h3 class="mt0">v${c.v} <span class="muted">${c.date}</span></h3><ul>${c.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`).join("")}
+        <p class="legend-note">작은 변경은 1.1, 1.2 …, 큰 개편은 2.0으로 올립니다. 새 버전이 나오면 화면 아래에 「새 버전이 있습니다 — 지금 적용」이 뜹니다.</p></div>
+
       <h2>백업</h2>
       ${native ? `<p class="muted">앱에서는 파일 내려받기가 안 됩니다. 백업은 웹 페이지에서 하거나 GitHub 저장소의 data/rounds.json을 쓰세요.</p>` : `<div class="row"><button class="btn ghost" id="bExport" type="button">rounds.json 내려받기</button></div>`}
       <p class="muted">현재 ${rounds.length}라운드 · GitHub 저장소의 커밋 기록에 모든 변경 이력이 남습니다.</p>`;
@@ -988,6 +993,15 @@
   });
 
   // ───────────── 시작 ─────────────
+  (() => {
+    const KEY_VER = KEY_CACHE.split(".")[0] + ".seenVersion";
+    const seen = ls.get(KEY_VER);
+    if (seen && seen !== APP_VERSION) {
+      const c = APP_CHANGES.find((x) => x.v === APP_VERSION);
+      setTimeout(() => toast(`v${APP_VERSION}로 업데이트되었습니다${c ? "\n" + c.items.slice(0, 3).map((x) => "· " + x).join("\n") : ""}`, 7000), 1200);
+    }
+    ls.set(KEY_VER, APP_VERSION);
+  })();
   (async () => {
     const cached = ls.get(KEY_CACHE);
     if (Array.isArray(cached)) { rounds = cached; source = "cache"; }

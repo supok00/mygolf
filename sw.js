@@ -1,9 +1,10 @@
 /* 오프라인에서도 앱 화면이 열리도록 화면 파일만 캐시한다.
  * 데이터(GitHub API)는 캐시하지 않는다 — 항상 최신을 읽고, 실패하면 앱이 자체 캐시를 쓴다.
- * 화면 파일은 '캐시 먼저 보여주고 뒤에서 갱신' 방식이다. 배포할 때 CACHE 이름을 올리면 새 서비스 워커가 설치되고,
+ * 화면 파일은 '캐시 먼저 보여주고 뒤에서 갱신' 방식이다. 배포할 때 js/version.js의 APP_VERSION을 올리면 캐시 이름이 바뀌어 새 서비스 워커가 설치되고,
  * 앱이 「새 버전이 있습니다 — 지금 적용」 줄을 띄워 바로 바꿀 수 있게 한다(js/app.js). */
-const CACHE = "mygolf-shell-v7";
-const SHELL = ["./", "index.html", "css/style.css", "js/github.js", "js/stats.js", "js/clubs.js", "js/smartscore.js", "js/guide.js", "js/app.js", "manifest.webmanifest", "icons/icon-192.png",
+importScripts("js/version.js");   // APP_VERSION — 버전을 올리면 캐시 이름이 바뀌어 새 버전이 설치된다
+const CACHE = "mygolf-shell-" + APP_VERSION;
+const SHELL = ["./", "index.html", "js/version.js", "css/style.css", "js/github.js", "js/stats.js", "js/clubs.js", "js/smartscore.js", "js/guide.js", "js/app.js", "manifest.webmanifest", "icons/icon-192.png",
   "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"];
 
 self.addEventListener("install", (e) => {
