@@ -670,10 +670,11 @@
       <ul class="desc">
         <li>네이버 스마트스코어의 라운드 화면(골프장 · 코스 · 날짜 시간 · 총타수 · 홀별 Par/Score)을 복사해 아래에 붙여 넣으세요. 여러 라운드를 한꺼번에 붙여도 됩니다.</li>
         <li>읽은 결과를 확인하고 고칠 수 있습니다. 같은 날짜·골프장이 이미 있으면 기본으로 빼 둡니다.</li>
-        <li>홀별 Par·Score와 티오프 시간만 들어옵니다. 퍼트 등 상세 항목은 등록 뒤 「수정」에서 채우면 됩니다.</li>
+        <li><b>홀 길이도 넣을 수 있습니다.</b> 스마트스코어 텍스트에는 거리가 없으니, 각 반쪽의 Par/Score 줄 아래에 <code>거리 343 318 314 ...</code>처럼 한 줄을 더 적으세요. 앞에 티 이름을 쓰면(<code>White 343 318 ...</code>) 그 티로 기록되고, <code>Yard 375 ...</code>로 쓰면 m로 바꿔 저장합니다. 18홀을 한 줄에 적어도 됩니다. 거리는 <b>실제로 친 티</b> 기준으로 넣으세요.</li>
+        <li>홀별 Par·Score·거리와 티오프 시간이 들어옵니다. 퍼트 등 상세 항목은 등록 뒤 「수정」에서 채우면 됩니다.</li>
       </ul>
       ${G.canWrite() ? "" : `<div class="notice">저장하려면 <a href="#/settings">설정</a>에서 GitHub 토큰을 넣어 주세요. 읽기와 확인은 지금도 됩니다.</div>`}
-      <textarea id="ssText" class="pastebox" placeholder="예)&#10;기흥CC&#10;NORTH, WEST&#10;2026-08-29 07:10&#10;80&#10;홀별 스코어&#10;Par 4 4 3 ...&#10;Score 0 1 0 ..."></textarea>
+      <textarea id="ssText" class="pastebox" placeholder="예)&#10;기흥CC&#10;NORTH, WEST&#10;2026-08-29 07:10&#10;80&#10;홀별 스코어&#10;Par 4 4 3 ...&#10;Score 0 1 0 ...&#10;White 320 300 140 ...   ← 홀 길이(선택)&#10;Par ...&#10;Score ...&#10;White ..."></textarea>
       <div class="row" style="margin-top:8px"><button class="btn" id="bParse" type="button">읽기</button><button class="btn ghost" id="bClear" type="button">지우기</button></div>
       <div id="ssOut"></div>`;
     const $ = (x) => document.getElementById(x);
@@ -691,18 +692,23 @@
       const n = parsed.filter((r) => r.pick).length;
       $("ssOut").innerHTML = `
         <h3>읽은 라운드 <span class="muted">${parsed.length}개 · 등록 대상 ${n}개</span></h3>
-        <div class="tbl-wrap"><table><thead><tr><th>등록</th><th>날짜</th><th class="l">골프장</th><th class="l">코스</th><th>홀</th><th>총타수</th><th class="l">확인</th></tr></thead>
+        <div class="tbl-wrap"><table><thead><tr><th>등록</th><th>날짜</th><th class="l">골프장</th><th class="l">코스</th><th class="l">티</th><th>홀</th><th>거리</th><th>총타수</th><th class="l">확인</th></tr></thead>
         <tbody>${parsed.map((r, i) => `<tr>
           <td><input type="checkbox" data-pick="${i}" ${r.pick ? "checked" : ""} ${r.holes.length ? "" : "disabled"}></td>
           <td>${dot(r.date)}${r.time ? "<br><span class='muted'>" + esc(r.time) + "</span>" : ""}</td>
           <td class="l"><input data-course="${i}" value="${esc(r.course)}" list="knownCourses" style="width:150px">${r.origCourse !== r.course ? `<br><span class="muted">원문: ${esc(r.origCourse)}</span>` : ""}</td>
           <td class="l">${esc([r.front, r.back].filter(Boolean).join(" / ") || "-")}</td>
+          <td class="l"><input data-tee="${i}" value="${esc(r.tee || "")}" list="teeOpts" placeholder="${r.distCount ? "티 입력" : "-"}" style="width:84px"></td>
           <td>${r.holes.length}</td>
+          <td>${r.distCount ? `${r.distCount}홀` : `<span class="muted">-</span>`}</td>
           <td><b>${r.total ?? "-"}</b>${r.statedTotal !== null && r.statedTotal !== r.total ? `<br><span class="ng">표기 ${r.statedTotal}</span>` : ""}</td>
           <td class="l">${r.dup ? `<span class="pill ng">이미 있음</span> ` : ""}${r.warnings.length ? `<span class="ng">${esc(r.warnings.join(" / "))}</span>` : `<span class="ok">정상</span>`}</td></tr>`).join("")}</tbody></table></div>
+        <datalist id="teeOpts">${["White", "Blue", "Red", "Black", "Gold"].map((t) => `<option value="${t}">`).join("")}</datalist>
+        ${parsed.some((r) => r.distCount && !r.tee) ? `<p class="legend-note ng">거리가 있는 라운드는 <b>티</b>를 적어 주세요. 다음에 같은 티로 칠 때 거리를 자동으로 불러올 수 있습니다.</p>` : ""}
         <datalist id="knownCourses">${known.sort().map((c) => `<option value="${esc(c)}">`).join("")}</datalist>
         <div class="row" style="margin-top:10px"><button class="btn" id="bImport" type="button" ${G.canWrite() && n ? "" : "disabled"}>선택한 ${n}개 GitHub에 등록</button></div>`;
       app.querySelectorAll("[data-pick]").forEach((c) => (c.onchange = () => { parsed[c.dataset.pick].pick = c.checked; drawParsed(); }));
+      app.querySelectorAll("[data-tee]").forEach((c) => (c.onchange = () => { parsed[c.dataset.tee].tee = c.value.trim(); drawParsed(); }));
       app.querySelectorAll("[data-course]").forEach((c) => (c.onchange = () => {
         const r = parsed[c.dataset.course];
         r.course = c.value.trim();
@@ -714,7 +720,7 @@
         const picks = parsed.filter((r) => r.pick);
         bi.disabled = true;
         bi.textContent = "등록 중…";
-        const objs = picks.map((r, i) => ({ id: "r" + r.date.replaceAll("-", "") + "-" + (Date.now() + i).toString(36), date: r.date, time: r.time, course: r.course, front: r.front, back: r.back, tee: "", memo: "스마트스코어 붙여넣기로 등록", holes: r.holes }));
+        const objs = picks.map((r, i) => ({ id: "r" + r.date.replaceAll("-", "") + "-" + (Date.now() + i).toString(36), date: r.date, time: r.time, course: r.course, front: r.front, back: r.back, tee: r.tee || "", memo: "스마트스코어 붙여넣기로 등록" + (r.distCount ? ` (거리 ${r.distCount}홀 포함)` : ""), holes: r.holes }));
         try {
           await commit((data) => data.concat(objs).sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)), `스마트스코어 등록 ${objs.length}건: ${objs.map((o) => o.date + " " + o.course).join(", ")}`.slice(0, 250));
           toast(`${objs.length}개 라운드를 등록했습니다.`);
