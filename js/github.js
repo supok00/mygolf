@@ -1,4 +1,4 @@
-/* GitHub 저장소를 데이터 저장소로 쓴다. 두 저장소(MyGolf, golf-round-web)의 data/를 동기화한다.
+/* GitHub 저장소를 데이터 저장소로 쓴다. 세 저장소(golf-round-web, mygolf, golf-lounge)의 data/를 동기화한다.
  * - 읽기: 기본 저장소(PRIMARY)의 파일을 GitHub API로 읽는다(공개 저장소라 토큰 없이도 가능).
  *         API 한도(시간당 60회/IP)에 걸리면 같은 사이트에 배포된 파일을 쓴다.
  * - 쓰기: 같은 변경(라운드 추가·수정·삭제)을 기본 저장소와 동기화 저장소(MIRRORS)의 최신 파일에 각각 적용해 커밋한다.
@@ -9,7 +9,7 @@ const GitHubStore = (() => {
   // ── 이 웹의 저장소 설정 ──
   const APP_KEY = "mygolf";
   const PRIMARY = { owner: "supok00", repo: "mygolf", branch: "main" };
-  const MIRRORS = [{ owner: "supok00", repo: "golf-round-web", branch: "main" }];
+  const MIRRORS = [{ owner: "supok00", repo: "golf-round-web", branch: "main" }, { owner: "supok00", repo: "golf-lounge", branch: "main" }];
   const ROUNDS = "data/rounds.json";
 
   const KEY_CFG = APP_KEY + ".github.v1";
@@ -139,14 +139,14 @@ const GitHubStore = (() => {
     return out;
   }
 
-  // 한쪽 내용으로 다른 쪽을 맞춘다. from: "primary" | "mirror"
-  async function resync(from, path) {
+  // 한 저장소(fromRepo) 내용으로 나머지 저장소를 모두 맞춘다
+  async function resync(fromRepo, path) {
     if (!canWrite()) throw new Error("GitHub 토큰이 없습니다.");
-    const m = MIRRORS[0];
-    const [src, dst] = from === "primary" ? [PRIMARY, m] : [m, PRIMARY];
+    const all = [PRIMARY, ...MIRRORS];
+    const src = all.find((r) => r.repo === fromRepo);
     const s = await readRepo(src, path);
     if (s.missing) throw new Error(`${label(src)}에 ${path}가 없습니다.`);
-    await updateRepo(dst, () => s.data, `${label(src)} 기준으로 데이터 동기화`, path);
+    for (const dst of all.filter((r) => r !== src)) await updateRepo(dst, () => s.data, `${label(src)} 기준으로 데이터 동기화`, path);
     try { localStorage.removeItem(KEY_PENDING); } catch { /* 무시 */ }
   }
   const pending = () => { try { return localStorage.getItem(KEY_PENDING) === "1"; } catch { return false; } };
@@ -159,7 +159,7 @@ const GitHubStore = (() => {
       results.push(`${r.repo}: ${res.ok && j.permissions && j.permissions.push ? "쓰기 가능" : "쓰기 권한 없음"}`);
     }
     const ok = results.every((x) => x.endsWith("쓰기 가능"));
-    return { ok, msg: (ok ? "두 저장소 모두 저장 권한 확인됨" : "권한 확인 필요 — ") + " (" + results.join(", ") + ")" };
+    return { ok, msg: (ok ? "모든 저장소 저장 권한 확인됨" : "권한 확인 필요 — ") + " (" + results.join(", ") + ")" };
   }
 
   return { cfg, setCfg, canWrite, load, update, syncStatus, resync, pending, testToken, PRIMARY, MIRRORS };

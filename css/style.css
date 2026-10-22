@@ -187,3 +187,16 @@ ul.desc li { margin: 2px 0; }
 .oneline { font-size: 15px; line-height: 1.8; }
 .oneline b { color: var(--green); }
 .toast { white-space: pre-line; max-width: 92vw; }
+
+/* 사용자 가이드 */
+.guide { max-width: 880px; }
+.guide-title { font-size: 24px; margin: 8px 0 12px; }
+.guide-toc { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.guide-toc a { background: var(--green-l); color: var(--green); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; text-decoration: none; }
+.guide-sec { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px 18px 16px; margin-top: 14px; scroll-margin-top: 140px; line-height: 1.7; }
+.guide-sec h3 { margin-top: 18px; }
+.guide-sec li { margin: 4px 0; }
+.guide td.wrap { white-space: normal; }
+.faq dt { font-weight: 700; margin-top: 10px; }
+.faq dd { margin: 2px 0 0 0; color: var(--ink-2); }
+code { background: #f0f2ef; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
