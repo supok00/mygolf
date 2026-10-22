@@ -3,41 +3,41 @@
   "fw": {
    "label": "드라이빙",
    "metric": "FW 안착률",
-   "zero": 0.2,
-   "full": 0.7
+   "zero": 0.25,
+   "full": 0.6
   },
   "gir": {
    "label": "아이언",
    "metric": "GIR 비율",
    "zero": 0,
-   "full": 0.7
+   "full": 0.3
   },
   "scr": {
    "label": "숏게임",
    "metric": "스크램블",
    "zero": 0,
-   "full": 0.6
+   "full": 0.3
   },
   "pph": {
    "label": "퍼팅",
    "metric": "홀당 퍼트",
    "zero": 2.4,
-   "full": 1.75
+   "full": 2.0
   },
   "fp": {
    "label": "거리감",
    "metric": "1st 퍼트 거리(m)",
-   "zero": 15,
-   "full": 5
+   "zero": 14,
+   "full": 6
   },
   "crisis": {
    "label": "위기관리",
    "metric": "18홀당 벌타+더블+ 초과타",
-   "zero": 12,
-   "full": 0
+   "zero": 20,
+   "full": 6
   }
  },
- "radarTarget": 70,
+ "radarTarget": 100,
  "targets": {
   "strokes": {
    "label": "평균 타수",
