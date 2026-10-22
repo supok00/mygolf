@@ -22,7 +22,7 @@
    "label": "퍼팅",
    "metric": "홀당 퍼트",
    "zero": 2.4,
-   "full": 2.0
+   "full": 2
   },
   "fp": {
    "label": "거리감",
@@ -93,5 +93,91 @@
    "low": true,
    "fmt": "1"
   }
- }
+ },
+ "clubs": [
+  {
+   "key": "D",
+   "label": "드라이버",
+   "dist": 210,
+   "on": true
+  },
+  {
+   "key": "3W",
+   "label": "3번 우드",
+   "dist": 190,
+   "on": true
+  },
+  {
+   "key": "5W",
+   "label": "5번 우드",
+   "dist": 175,
+   "on": false
+  },
+  {
+   "key": "UT",
+   "label": "유틸리티",
+   "dist": 165,
+   "on": false
+  },
+  {
+   "key": "4i",
+   "label": "4번 아이언",
+   "dist": 175,
+   "on": true
+  },
+  {
+   "key": "5i",
+   "label": "5번 아이언",
+   "dist": 165,
+   "on": true
+  },
+  {
+   "key": "6i",
+   "label": "6번 아이언",
+   "dist": 155,
+   "on": true
+  },
+  {
+   "key": "7i",
+   "label": "7번 아이언",
+   "dist": 145,
+   "on": true
+  },
+  {
+   "key": "8i",
+   "label": "8번 아이언",
+   "dist": 135,
+   "on": true
+  },
+  {
+   "key": "9i",
+   "label": "9번 아이언",
+   "dist": 125,
+   "on": true
+  },
+  {
+   "key": "PW",
+   "label": "피칭 웨지",
+   "dist": 115,
+   "on": true
+  },
+  {
+   "key": "AW",
+   "label": "어프로치 웨지(50°)",
+   "dist": 95,
+   "on": true
+  },
+  {
+   "key": "SW",
+   "label": "샌드 웨지(54°)",
+   "dist": 85,
+   "on": true
+  },
+  {
+   "key": "LW",
+   "label": "로브 웨지(58°)",
+   "dist": 75,
+   "on": true
+  }
+ ]
 }
