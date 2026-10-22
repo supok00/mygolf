@@ -365,6 +365,11 @@
           <div class="hc-title">${cur}번 홀 <span class="muted">${cur <= 9 ? "전반" : "후반"}</span></div>
           <div class="muted">${isNum(h.par) && isNum(h.score) ? `타수 <b>${h.par + h.score}</b>` : ""} ${gir === null ? "" : `· GIR ${gir ? "○" : "×"}`} ${S.holeCheck(h) ? `<span class="ng"> · 온그린+퍼트 ≠ 타수</span>` : ""}</div>
         </div>
+        ${(() => {
+          const p = Clubs.plan(h.par, h.dist, Clubs.bag(settings));
+          if (p) return `<div class="plan">🏌️ <b>공략 가이드</b> <span class="muted">(추정)</span> ${p.text}</div>`;
+          return isNum(h.par) ? `<div class="plan muted">거리를 넣으면 내 클럽 거리로 공략 가이드가 나옵니다</div>` : "";
+        })()}
         ${FIELDS.map(([g, fs]) => `<div class="fgroup"><div class="fg-title">${g}</div><div class="form">${fs.map(field).join("")}</div></div>`).join("")}`;
       $("holeCard").querySelectorAll("[data-k]").forEach((el) => {
         el.addEventListener("change", () => {
@@ -783,6 +788,12 @@
          ...D.len.p4.map((x) => ["파4 " + x.l, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl), pct(x.gir)]),
          ...D.len.p5.map((x) => ["파5 " + x.l, x.n, sgn(x.over), pct(x.parlow), pct(x.dbl), pct(x.gir)])],
         `거리를 기록한 ${D.len.n}홀 기준. 긴 파4에서만 크게 무너지면 '보기 공략(3온)'을, 짧은 홀에서도 더블이 많으면 티샷·어프로치 실수를 먼저 점검합니다. 파3 거리대별 GIR은 그 거리의 아이언 정확도입니다.`)}
+      ${(() => {
+        const AP = Clubs.approachStats(typeof fr !== "undefined" ? fr : rounds, settings, sel || null);
+        return t("⑨ 예상 어프로치 클럽별 (추정)", ["", "홀 수", "평균 Score", "GIR", "더블+ 비율"],
+          AP.map((x) => [x.label + (x.dist ? ` <span class="muted">${x.dist}m</span>` : ""), x.n, sgn(x.over), pct(x.gir), pct(x.dbl)]),
+          `홀 거리와 <a href="#/settings">내 클럽 거리</a>로 그린을 노린 클럽을 추정했습니다(티샷은 드라이버 평균 거리, 파5는 웨지 거리를 남기는 레이업으로 가정). 실제 친 클럽과 다를 수 있으니 경향만 보세요. GIR이 유난히 낮은 클럽이 연습 1순위입니다.${Clubs.isDefault(settings) ? " <b>지금은 예시 클럽 거리</b>로 계산했습니다." : ""}`);
+      })()}
       ${t("⑦ 그린 미스 · 어프로치 거리", ["", "홀 수", "평균 Score", "스크램블%"], D.green.map((x) => [x.l, x.n, sgn(x.over), x.scr === null ? "-" : pct(x.scr)]), "짧음이 대부분이면 한 클럽 길게, 30m 이상에서 스크램블이 낮으면 하프 웨지 거리 연습을 우선합니다.")}`;
     document.getElementById("scope").onchange = (e) => { location.hash = "#/detail" + (e.target.value ? "?r=" + encodeURIComponent(e.target.value) : ""); };
     chart("cFp", { type: "bar", data: { labels: D.fp.map((x) => x.l), datasets: [{ label: "1퍼트율", data: D.fp.map((x) => x.one), backgroundColor: "#2e7d5b" }, { label: "3퍼트율", data: D.fp.map((x) => x.three), backgroundColor: "#e5352b" }] }, options: baseOpts({ plugins: legendOn, scales: { y: { beginAtZero: true, ticks: { callback: (v) => Math.round(v * 100) + "%" }, ...noGrid }, x: noGrid } }), plugins: [valueLabels(pct)] });
@@ -844,6 +855,14 @@
       <p class="legend-note">기준값은 아마추어 핸디캡별 통계 경향을 참고한 가정값입니다(100점 ≈ 싱글~10 핸디캡, 0점 ≈ 초보). 비율은 0~1로 입력합니다.</p>
       <div class="row" style="margin-top:10px"><button class="btn" id="bSaveSet" type="button" ${G.canWrite() ? "" : "disabled"}>기준값 GitHub에 저장</button><button class="btn ghost" id="bResetSet" type="button">기본값 불러오기</button></div>
 
+      <h2>내 클럽 거리 <span class="muted">평균 거리(m), 굴러간 거리 포함</span></h2>
+      ${Clubs.isDefault(settings) ? `<div class="notice">지금은 <b>예시값</b>입니다. 내 평균 거리로 바꾸고 저장하세요. 연습장이나 스마트 거리측정 기록의 '평소 거리'를 넣으면 됩니다(최고 거리 아님).</div>` : ""}
+      <div class="tbl-wrap" style="margin-top:8px"><table><thead><tr><th>사용</th><th class="l">클럽</th><th>거리(m)</th></tr></thead>
+        <tbody>${(Array.isArray(settings.clubs) ? settings.clubs : Clubs.DEFAULT_BAG).map((c, i) => `<tr><td><input type="checkbox" data-con="${i}" ${c.on ? "checked" : ""}></td><td class="l"><input data-clab="${i}" value="${esc(c.label)}" style="width:170px"></td><td><input data-cdist="${i}" type="number" inputmode="numeric" step="5" min="0" value="${c.dist}" style="width:84px"></td></tr>`).join("")}</tbody></table></div>
+      <div id="gapBox" style="margin-top:8px"></div>
+      <div class="row" style="margin-top:10px"><button class="btn" id="bSaveClubs" type="button" ${G.canWrite() ? "" : "disabled"}>클럽 거리 GitHub에 저장</button><button class="btn ghost" id="bClubDefault" type="button">예시값으로</button></div>
+      <p class="legend-note">저장하면 라운드 입력의 <b>공략 가이드</b>와 상세 분석 <b>⑨ 예상 어프로치 클럽별</b>에 쓰입니다. 안 쓰는 클럽은 「사용」을 끄세요.</p>
+
       <h2>백업</h2>
       ${native ? `<p class="muted">앱에서는 파일 내려받기가 안 됩니다. 백업은 웹 페이지에서 하거나 GitHub 저장소의 data/rounds.json을 쓰세요.</p>` : `<div class="row"><button class="btn ghost" id="bExport" type="button">rounds.json 내려받기</button></div>`}
       <p class="muted">현재 ${rounds.length}라운드 · GitHub 저장소의 커밋 기록에 모든 변경 이력이 남습니다.</p>`;
@@ -893,6 +912,27 @@
       } catch (e) { toast(e.message, 6000); }
     };
     $("bResetSet").onclick = () => { settings = structuredClone(S.DEFAULT_SETTINGS); settingsView(); toast("기본값을 불러왔습니다. 저장하려면 「기준값 GitHub에 저장」을 누르세요."); };
+    // 클럽 거리: 입력이 바뀔 때마다 간격 점검을 다시 보여 준다
+    const baseClubs = (Array.isArray(settings.clubs) ? settings.clubs : Clubs.DEFAULT_BAG).map((c) => ({ ...c }));
+    const readClubs = () => baseClubs.map((c, i) => ({
+      key: c.key, label: (app.querySelector(`[data-clab="${i}"]`).value || c.label).trim(),
+      dist: Number(app.querySelector(`[data-cdist="${i}"]`).value) || 0, on: app.querySelector(`[data-con="${i}"]`).checked,
+    }));
+    const drawGaps = () => {
+      const gs = Clubs.gaps(Clubs.bag({ clubs: readClubs() }));
+      $("gapBox").innerHTML = gs.length ? `<div class="notice"><b>클럽 간격 점검</b><br>${gs.map((g) => `· [${g.type}] ${esc(g.text)}`).join("<br>")}</div>` : `<p class="legend-note ok">클럽 간 거리 간격이 고릅니다.</p>`;
+    };
+    app.querySelectorAll("[data-con],[data-clab],[data-cdist]").forEach((el) => el.addEventListener("input", drawGaps));
+    drawGaps();
+    $("bSaveClubs").onclick = async () => {
+      settings.clubs = readClubs();
+      try {
+        const { mirrorErrors } = await G.update(() => settings, "클럽 거리 변경", G.SETTINGS || "data/settings.json");
+        toast(mirrorErrors.length ? "클럽 거리는 저장했지만 동기화 실패: " + mirrorErrors.join(" / ") : "클럽 거리를 저장했습니다.", 4000);
+        settingsView();
+      } catch (e) { toast(e.message, 6000); }
+    };
+    $("bClubDefault").onclick = () => { delete settings.clubs; settingsView(); toast("예시값을 불러왔습니다. 저장하려면 「클럽 거리 GitHub에 저장」을 누르세요."); };
     if ($("bExport")) $("bExport").onclick = () => {
       const a = document.createElement("a");
       a.href = URL.createObjectURL(new Blob([JSON.stringify(rounds, null, 1)], { type: "application/json" }));
