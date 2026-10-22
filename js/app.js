@@ -182,12 +182,18 @@
   function kpi(lbl, val, sub, cls = "") {
     return `<div class="kpi"><div class="lbl">${lbl}</div><div class="val ${cls}">${val}</div><div class="sub">${sub || "&nbsp;"}</div></div>`;
   }
+  // 목표 달성 여부: 낮을수록 좋은 지표(타수·퍼트·벌타 등)는 목표 이하, 높을수록 좋은 지표(파 이하 홀·GIR 등)는 목표 이상이면 달성
+  const meets = (v, t) => (isNum(v) ? (t.low ? v <= t.v : v >= t.v) : null);
+  const judge = (ok) => (ok === null ? "-" : `<span class="pill ${ok ? "ok" : "ng"}">${ok ? "달성" : "미달"}</span>`);
+  const valCell = (v, t, ok, strong) => `<td class="${ok === null ? "" : ok ? "ok" : "ng"}">${strong ? "<b>" : ""}${fmtT(v, t.fmt)}${strong ? "</b>" : ""}</td>`;
+  const goalText = (t) => `${fmtT(t.v, t.fmt)} ${t.low ? "이하" : "이상"}`;
+
   function dashboard() {
     const fr = frounds();
     const A = S.analyze(fr, settings);
     const rows = Object.entries(settings.targets).map(([k, t]) => {
       const m = A.metric(k);
-      return { t, m, ok: isNum(m.r5) ? (t.low ? m.r5 <= t.v : m.r5 >= t.v) : null };
+      return { t, m, ok: meets(m.r5, t), okLast: meets(m.last, t) };
     });
     const okList = rows.filter((r) => r.ok === true).map((r) => r.t.label);
     const ngList = rows.filter((r) => r.ok === false).map((r) => r.t.label);
@@ -207,10 +213,10 @@
       </div>
       <h2>실력 진단 <span class="muted">최근 5라운드 vs 목표</span></h2>
       <div class="tbl-wrap"><table>
-        <thead><tr><th class="l">지표</th><th>전체 평균</th><th>최근 5R</th><th>직전 라운드</th><th>목표</th><th>판정</th></tr></thead>
-        <tbody>${rows.map(({ t, m, ok }) => `<tr><td class="l"><b>${t.label}</b></td><td>${fmtT(m.all, t.fmt)}</td><td><b>${fmtT(m.r5, t.fmt)}</b></td><td>${fmtT(m.last, t.fmt)}</td><td class="muted">${fmtT(t.v, t.fmt)}</td><td>${ok === null ? "-" : `<span class="pill ${ok ? "ok" : "ng"}">${ok ? "달성" : "미달"}</span>`}</td></tr>`).join("")}</tbody>
+        <thead><tr><th class="l">지표</th><th>목표</th><th>전체 평균</th><th>최근 5R</th><th>판정<br><span class="muted">최근 5R</span></th><th>직전 라운드</th><th>판정<br><span class="muted">직전</span></th></tr></thead>
+        <tbody>${rows.map(({ t, m, ok, okLast }) => `<tr><td class="l"><b>${t.label}</b><br><span class="muted">${t.low ? "▼ 낮을수록 좋음" : "▲ 높을수록 좋음"}</span></td><td><b>${goalText(t)}</b></td><td class="muted">${fmtT(m.all, t.fmt)}</td>${valCell(m.r5, t, ok, true)}<td>${judge(ok)}</td>${valCell(m.last, t, okLast, false)}<td>${judge(okLast)}</td></tr>`).join("")}</tbody>
       </table></div>
-      <p class="legend-note">타수 지표는 18홀 라운드(${A.fulls.length}회), 퍼트/GIR/FW/스크램블/벌타는 퍼트를 기록한 상세 라운드(${A.dets.length}회) 기준입니다.</p>
+      <p class="legend-note">판정: 「이상」 지표는 값이 목표와 같거나 크면, 「이하」 지표는 목표와 같거나 작으면 달성입니다. 최근 5R과 직전 라운드를 각각 판정하고, 강점·약점은 최근 5R 판정을 씁니다. 타수 지표는 18홀 라운드(${A.fulls.length}회), 퍼트/GIR/FW/스크램블/벌타는 퍼트를 기록한 상세 라운드(${A.dets.length}회) 기준입니다.</p>
       <div class="grid g2" style="margin-top:12px">
         <div class="card"><h3 class="mt0">6영역 육각형 <span class="muted">최근 상세 5R vs 전체</span></h3><div class="chart-box tall"><canvas id="cRadar"></canvas></div></div>
         <div class="card"><h3 class="mt0">라운드당 타수 손실 <span class="muted">최근 상세 5R</span></h3><div class="chart-box tall"><canvas id="cLoss"></canvas></div>
