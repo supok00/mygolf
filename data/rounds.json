@@ -5652,13 +5652,24 @@
     "h": 16,
     "par": 5,
     "dist": 544,
-    "hcp": 4
+    "hcp": 4,
+    "score": 0,
+    "putts": 1,
+    "fw": 1,
+    "drive": 250,
+    "ong": 4,
+    "fp": 10
    },
    {
     "h": 17,
     "par": 3,
     "dist": 149,
-    "hcp": 14
+    "hcp": 14,
+    "score": 1,
+    "putts": 3,
+    "ong": 2,
+    "fp": 10,
+    "bunker": 1
    },
    {
     "h": 18,
