@@ -5577,19 +5577,40 @@
     "h": 10,
     "par": 4,
     "dist": 352,
-    "hcp": 8
+    "hcp": 8,
+    "fw": 1,
+    "drive": 200,
+    "score": 2,
+    "putts": 2,
+    "ong": 4,
+    "fp": 13,
+    "bunker": 2
    },
    {
     "h": 11,
     "par": 4,
     "dist": 354,
-    "hcp": 6
+    "hcp": 6,
+    "putts": 2,
+    "fw": 0,
+    "miss": "R",
+    "drive": 220,
+    "ong": 3,
+    "fp": 12
    },
    {
     "h": 12,
     "par": 5,
     "dist": 481,
-    "hcp": 2
+    "hcp": 2,
+    "score": 2,
+    "putts": 3,
+    "pen": 1,
+    "fw": 0,
+    "miss": "R",
+    "drive": 220,
+    "ong": 4,
+    "fp": 15
    },
    {
     "h": 13,
