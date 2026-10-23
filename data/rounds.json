@@ -5628,13 +5628,25 @@
     "h": 14,
     "par": 4,
     "dist": 318,
-    "hcp": 12
+    "hcp": 12,
+    "putts": 1,
+    "fw": 1,
+    "drive": 220,
+    "ong": 3,
+    "fp": 1,
+    "score": 0
    },
    {
     "h": 15,
     "par": 4,
     "dist": 274,
-    "hcp": 16
+    "hcp": 16,
+    "score": 0,
+    "putts": 2,
+    "fw": 0,
+    "drive": 200,
+    "ong": 2,
+    "fp": 3
    },
    {
     "h": 16,
