@@ -5479,31 +5479,60 @@
     "drive": 209,
     "ong": 2,
     "putts": 3,
-    "fp": 6
+    "fp": 6,
+    "score": 1
    },
    {
     "h": 3,
     "par": 4,
     "dist": 275,
-    "hcp": 17
+    "hcp": 17,
+    "drive": 210,
+    "ong": 2,
+    "fp": 7,
+    "fw": 1,
+    "putts": 2,
+    "score": 0
    },
    {
     "h": 4,
     "par": 5,
     "dist": 492,
-    "hcp": 1
+    "hcp": 1,
+    "fw": 0,
+    "drive": 240,
+    "score": 0,
+    "putts": 1,
+    "ong": 4,
+    "fp": 2,
+    "appr": 27
    },
    {
     "h": 5,
     "par": 3,
     "dist": 181,
-    "hcp": 9
+    "hcp": 9,
+    "score": 1,
+    "putts": 2,
+    "miss": "L",
+    "ong": 2,
+    "fp": 2,
+    "appr": 18
    },
    {
     "h": 6,
     "par": 4,
     "dist": 312,
-    "hcp": 15
+    "hcp": 15,
+    "fw": 1,
+    "miss": "-",
+    "drive": 210,
+    "ong": 2,
+    "score": 1,
+    "putts": 2,
+    "fp": 8,
+    "gmiss": "길음",
+    "appr": 13
    },
    {
     "h": 7,
