@@ -5455,7 +5455,7 @@
   "front": "드림OUT",
   "back": "드림IN",
   "tee": "White",
-  "memo": "",
+  "memo": "맑음",
   "holes": [
    {
     "h": 1,
@@ -5476,11 +5476,12 @@
     "dist": 329,
     "hcp": 3,
     "fw": 1,
-    "drive": 209,
+    "drive": 210,
     "ong": 2,
     "putts": 3,
     "fp": 6,
-    "score": 1
+    "score": 1,
+    "miss": "-"
    },
    {
     "h": 3,
@@ -5492,7 +5493,8 @@
     "fp": 7,
     "fw": 1,
     "putts": 2,
-    "score": 0
+    "score": 0,
+    "miss": "-"
    },
    {
     "h": 4,
@@ -5505,7 +5507,9 @@
     "putts": 1,
     "ong": 4,
     "fp": 2,
-    "appr": 27
+    "appr": 27,
+    "miss": "-",
+    "gmiss": "짧음"
    },
    {
     "h": 5,
@@ -5514,10 +5518,11 @@
     "hcp": 9,
     "score": 1,
     "putts": 2,
-    "miss": "L",
+    "miss": "-",
     "ong": 2,
     "fp": 2,
-    "appr": 18
+    "appr": 18,
+    "gmiss": "좌"
    },
    {
     "h": 6,
@@ -5571,7 +5576,8 @@
     "ong": 3,
     "fp": 13,
     "score": 1,
-    "putts": 3
+    "putts": 3,
+    "miss": "-"
    },
    {
     "h": 10,
@@ -5580,11 +5586,14 @@
     "hcp": 8,
     "fw": 1,
     "drive": 200,
-    "score": 2,
+    "score": 1,
     "putts": 2,
-    "ong": 4,
+    "ong": 3,
     "fp": 13,
-    "bunker": 2
+    "bunker": 1,
+    "miss": "-",
+    "gmiss": "길음",
+    "appr": 25
    },
    {
     "h": 11,
@@ -5597,7 +5606,9 @@
     "drive": 220,
     "ong": 3,
     "fp": 12,
-    "score": 1
+    "score": 1,
+    "gmiss": "우",
+    "appr": 30
    },
    {
     "h": 12,
@@ -5622,7 +5633,8 @@
     "putts": 2,
     "drive": 150,
     "ong": 1,
-    "fp": 15
+    "fp": 15,
+    "miss": "-"
    },
    {
     "h": 14,
@@ -5634,7 +5646,10 @@
     "drive": 220,
     "ong": 3,
     "fp": 1,
-    "score": 0
+    "score": 0,
+    "miss": "-",
+    "gmiss": "우",
+    "appr": 10
    },
    {
     "h": 15,
@@ -5646,7 +5661,8 @@
     "fw": 0,
     "drive": 200,
     "ong": 2,
-    "fp": 3
+    "fp": 3,
+    "miss": "R"
    },
    {
     "h": 16,
@@ -5658,7 +5674,10 @@
     "fw": 1,
     "drive": 250,
     "ong": 4,
-    "fp": 10
+    "fp": 10,
+    "miss": "-",
+    "gmiss": "짧음",
+    "appr": 20
    },
    {
     "h": 17,
@@ -5669,7 +5688,11 @@
     "putts": 2,
     "ong": 2,
     "fp": 10,
-    "bunker": 1
+    "bunker": 1,
+    "miss": "R",
+    "drive": 130,
+    "gmiss": "짧음",
+    "appr": 10
    },
    {
     "h": 18,
@@ -5683,7 +5706,8 @@
     "ong": 3,
     "fp": 4,
     "appr": 30,
-    "gmiss": "짧음"
+    "gmiss": "짧음",
+    "miss": "R"
    }
   ]
  }
